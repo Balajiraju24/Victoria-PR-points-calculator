@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { BookOpen, ArrowRight } from 'lucide-react';
+import { BookOpen, ArrowRight, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'How the Victorian Points Test Works | VicPoints',
@@ -14,9 +14,19 @@ export default function HowItWorksPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
       {/* Header */}
       <div className="space-y-4">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300 border border-brand-200 dark:border-brand-800">
-          <BookOpen className="w-3.5 h-3.5" />
-          Technical Guide &amp; Scoring Methodology
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-50 text-brand-700 dark:bg-brand-950 dark:text-brand-300 border border-brand-200 dark:border-brand-800">
+            <BookOpen className="w-3.5 h-3.5" />
+            Technical Guide &amp; Scoring Methodology
+          </div>
+          <a
+            href="https://liveinmelbourne.vic.gov.au/migrate/skilled-migration-visas/vpt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline"
+          >
+            Official Live in Melbourne VPT Matrix <ExternalLink className="w-3.5 h-3.5" />
+          </a>
         </div>
         <h1 className="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
           How the Victorian Points Test (VPT) Works
